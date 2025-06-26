@@ -4,7 +4,6 @@ class User {
   final String firstName;
   final String lastName;
   final String avatar;
-
   User({
     required this.id,
     required this.email,
@@ -12,7 +11,6 @@ class User {
     required this.lastName,
     required this.avatar,
   });
-
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
       id: json['id'],

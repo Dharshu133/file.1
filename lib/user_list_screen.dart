@@ -1,24 +1,17 @@
 import 'package:flutter/material.dart';
 import 'UserModel.dart';
 import 'api_service.dart';
-
 class UserListScreen extends StatefulWidget {
   const UserListScreen({super.key});
-
-  @override
   State<UserListScreen> createState() => _UserListScreenState();
 }
-
 class _UserListScreenState extends State<UserListScreen> {
   List<User> users = [];
   bool isLoading = true;
-
-  @override
   void initState() {
     super.initState();
     loadUsers();
   }
-
   void loadUsers() async {
     try {
       final fetchedUsers = await fetchUsers();
@@ -29,9 +22,7 @@ class _UserListScreenState extends State<UserListScreen> {
     } catch (e) {
       print("Error: $e");
     }
-  }
-
-  @override
+  }  
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("User List")),
@@ -44,9 +35,7 @@ class _UserListScreenState extends State<UserListScreen> {
                 return ListTile(
                   leading: CircleAvatar(
                     backgroundImage: NetworkImage(user.avatar),
-                  ),
-                  title: Text('${user.firstName} ${user.lastName}'),
-                  subtitle: Text(user.email),
+                  ),                 
                 );
               },
             ),

@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-
 class MyApp extends StatefulWidget {
-  @override
   _MyAppState createState() => _MyAppState();
 }
-
 class _MyAppState extends State<MyApp> {
   int counter = 0;
-
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -28,6 +23,5 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
 void main() => runApp(MyApp());
 

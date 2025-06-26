@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-
 class UserDetailScreen extends StatelessWidget {
   final Map user;
   const UserDetailScreen({super.key, required this.user});
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("User Detail")),
